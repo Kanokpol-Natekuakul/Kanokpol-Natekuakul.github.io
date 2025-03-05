@@ -31,6 +31,18 @@
         <input type="text" id="search" class="search-box" placeholder="Search Certificates...">
         
         <div class="certificate-list" id="certificateList">
+            <div class="certificate-item" data-name="Ai">
+                <img src="/pic/Artificial Interlligence .jpg" alt="Ai" onclick="openModal(this.src)">
+                <p>Artificial Interlligence</p>
+            </div>
+            <div class="certificate-item" data-name="Mascot Design 3D Printing">
+                <img src="/pic/Mascot Design 3D.jpg" alt="Mascot Design 3D Printing" onclick="openModal(this.src)">
+                <p>Mascot Design 3D Printing</p>
+            </div>
+            <div class="certificate-item" data-name="Cybersecurity">
+                <img src="/pic/Cybersecurity Professional .jpg" alt="Cybersecurity" onclick="openModal(this.src)">
+                <p>Cybersecurity Professional</p>
+            </div>
             <div class="certificate-item" data-name="Python Data NumPy Matplotlib">
                 <img src="/pic/Learn Python Data Processing with NumPy and Matplotlib.jpg" alt="Python Data NumPy Matplotlib" onclick="openModal(this.src)">
                 <p>Learn Python Data Processing with NumPy and Matplotlib</p>
@@ -79,12 +91,13 @@
                 <img src="pic/Cybersecurity Foundation.jpg" alt="CyberSecurity" onclick="openModal(this.src)">
                 <p>Cybersecurity Foundation</p>
             </div>
-            
+            <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
         </div>
     </div>
     <div class="modal" id="modal" onclick="closeModal()">
         <span class="close">&times;</span>
-        <img id="modalImg">
+        <img id="modalImg" alt="">
     </div>
     
 
@@ -128,6 +141,26 @@
         });
     });
 });
+// ดึงปุ่ม
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// ฟังก์ชันเช็คการเลื่อนหน้า
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = "block"; // แสดงปุ่มเมื่อเลื่อนลงมา
+    } else {
+        scrollToTopBtn.style.display = "none"; // ซ่อนปุ่มเมื่ออยู่บนสุด
+    }
+});
+
+// ฟังก์ชันเลื่อนกลับไปด้านบน
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // เลื่อนขึ้นแบบ smooth
+    });
+});
+
 
     </script>
 </body>

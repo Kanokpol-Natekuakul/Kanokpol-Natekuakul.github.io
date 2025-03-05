@@ -24,7 +24,7 @@ body{
 
 header{
     margin-top: 20px;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,7 +34,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 .logo{
@@ -158,7 +158,7 @@ span{
     position: relative;
     width: 30vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 25px  #b74b4b;
     cursor: pointer;
     transition: 0.2s linear;
 }
@@ -353,4 +353,23 @@ span{
 }
 
 
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #b74b4b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* ซ่อนปุ่มก่อน */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+#scrollToTopBtn:hover {
+    background-color: #922626;
+    transform: scale(1.1);
+}
