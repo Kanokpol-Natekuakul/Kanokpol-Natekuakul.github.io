@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="/css/Education.css">
     <title>Portfolio Website</title>
 </head>
+
 <body>
     <header>
         <a href="index.html" class="logo">Pol</a>
 
         <nav class="nav-menu">
             <a href="index.html" class="active"> Home</a>
-            <a href="Skills.html" >Skills</a>
-            <a href="Education.html" >Education</a>
-            <a href="Experience.html" >Experience</a>
-            <a href="Certificate.html" >Certificate</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Certificate.html">Certificate</a>
 
         </nav>
         <div class="hamburger">
@@ -27,7 +28,7 @@
             <span></span>
         </div>
     </header>
-    
+
     <section id="education" class="position-relative padding-medium" data-aos="fade-up">
         <div class="container">
             <div class="row justify-content-center">
@@ -64,36 +65,37 @@
             </div>
         </div>
     </section>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const navLinks = document.querySelectorAll("nav a");
-                const currentPath = window.location.pathname.split("/").pop();
-        
-                navLinks.forEach(link => {
-                    if (link.getAttribute("href") === currentPath) {
-                        link.classList.add("active");
-                    } else {
-                        link.classList.remove("active");
-                    }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav a");
+            const currentPath = window.location.pathname.split("/").pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+
+            // ซ่อนเมนูเมื่อกดลิงก์
+            document.querySelectorAll(".nav-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("active");
+                    hamburger.classList.remove("active");
                 });
             });
-            document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-    });
-
-    // ซ่อนเมนูเมื่อกดลิงก์
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            hamburger.classList.remove("active");
         });
-    });
-});
-        </script>
+    </script>
 </body>
-</html>        
+
+</html>

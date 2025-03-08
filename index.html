@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Portfolio Website</title>
 </head>
+
 <body>
     <header>
         <a href="index.html" class="logo">Pol</a>
 
         <nav class="nav-menu">
             <a href="index.html" class="active"> Home</a>
-            <a href="Skills.html"  >Skills</a>
-            <a href="Education.html" >Education</a>
-            <a href="Experience.html" >Experience</a>
-            <a href="Certificate.html" >Certificate</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Certificate.html">Certificate</a>
         </nav>
         <!-- Hamburger Menu -->
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     <section class="home">
         <div class="home-img">
@@ -39,32 +40,32 @@
                 <a href="https://line.me/R/ti/p/~kanokpolpol"><i class="fa-brands fa-line"></i></a>
                 <a href="https://www.facebook.com/kanokpolpol"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/pol_knp_/"><i class="fa-brands fa-instagram"></i></a>
-                
-            <!-- </div>
+
+                <!-- </div>
             <a href="#" class="btn">Hire me</a>
         </div> -->
-     
-        
+
+
     </section>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
 
-    hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-    });
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
 
-    // ซ่อนเมนูเมื่อกดลิงก์
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            hamburger.classList.remove("active");
+            // ซ่อนเมนูเมื่อกดลิงก์
+            document.querySelectorAll(".nav-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("active");
+                    hamburger.classList.remove("active");
+                });
+            });
         });
-    });
-});
-
     </script>
 </body>
+
 </html>
