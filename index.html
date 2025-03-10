@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Pol</a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="active"> Home</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Certificate.html">Certificate</a>
+        </nav>
+        <!-- Hamburger Menu -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="/pic/index.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Pol</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Hi ! My name is kanokpol Natekuakul</p>
+            <div class="social-icons">
+                <a href="https://github.com/Kanokpol-Natekuakul"><i class="fa-brands fa-github"></i></a>
+                <a href="https://line.me/R/ti/p/~kanokpolpol"><i class="fa-brands fa-line"></i></a>
+                <a href="https://www.facebook.com/kanokpolpol"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/pol_knp_/"><i class="fa-brands fa-instagram"></i></a>
+
+                <!-- </div>
+            <a href="#" class="btn">Hire me</a>
+        </div> -->
+
+
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+
+            // ซ่อนเมนูเมื่อกดลิงก์
+            document.querySelectorAll(".nav-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("active");
+                    hamburger.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

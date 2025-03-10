@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/Certificate.css" />
+  <title>Portfolio Website</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">Pol</a>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="Skills.html">Skills</a>
+      <a href="Education.html">Education</a>
+      <a href="Experience.html">Experience</a>
+      <a href="Certificate.html" class="active">Certificate</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Certificates</h1>
+    <input type="text" id="search" class="search-box" placeholder="Search Certificates..." />
+    <d class="certificate-list" id="certificateList">
+      <div class="certificate-item" data-name="Basic Communicative English for work">
+        <img src="/pic/Basic Communicative English for work.jpg" alt="Basic Communicative English for work"
+          onclick="openModal(this.src)" />
+        <p>Basic Communicative English for work</p>
+      </div>
+      <div class="certificate-item" data-name="Experiential English">
+        <img src="/pic/Experiential English.jpg" alt="Experiential English"
+          onclick="openModal(this.src)" />
+        <p>Experiential English</p>
+      </div>
+      <div class="certificate-item" data-name="Quantum Computing">
+        <img src="/pic/borntodev-academy_Introduction to Quantum Computing_certificate.png" alt="Quantum Computing"
+          onclick="openModal(this.src)" />
+        <p>Quantum Computing</p>
+      </div>
+      <div class="certificate-item" data-name="TypeScript">
+        <img src="/pic/borntodev-academy_Get started with TypeScript_certificate.png" alt="TypeScript"
+          onclick="openModal(this.src)" />
+        <p>TypeScript</p>
+      </div>
+      <div class="certificate-item" data-name="English for Career Perparation">
+        <img src="/pic/English for Career Perparation.jpg" alt="English for Career Perparation"
+          onclick="openModal(this.src)" />
+        <p>English for Career Perparation</p>
+      </div>
+      <div class="certificate-item" data-name="Chat in English with Chat GPT">
+        <img src="/pic/Chat in English with Chat GPT.jpg" alt="Chat in English with Chat GPT"
+          onclick="openModal(this.src)" />
+        <p>TypeScript</p>
+      </div>
+
+      <div class="certificate-item" data-name="LINE Chatbot with ChatGPT and Gemini">
+        <img src="/pic/borntodev-academy_Building LINE Chatbot with ChatGPT and Gemini_certificate.png"
+          alt="LINE Chatbot with ChatGPT and Gemini" onclick="openModal(this.src)" />
+        <p>LINE Chatbot with ChatGPT and Gemini</p>
+      </div>
+
+      <div class="certificate-item" data-name="Introduction UX/UI Design">
+        <img src="/pic/UI.jpg" alt="Introduction UX/UI Design" onclick="openModal(this.src)" />
+        <p>Introduction UX/UI Design</p>
+      </div>
+      <div class="certificate-item" data-name="VR">
+        <img src="/pic/Smart VET AR.jpg" alt="VR" onclick="openModal(this.src)" />
+        <p>Smart VR</p>
+      </div>
+
+      <div class="certificate-item" data-name="English Digital Communication">
+        <img src="/pic/English Digital Communication.jpg" alt="English Digital Communication"
+          onclick="openModal(this.src)" />
+        <p>English Digital Communication</p>
+      </div>
+
+      <div class="certificate-item" data-name="Computer Software">
+        <img src="/pic/Computer Software.jpg" alt="Computer Software" onclick="openModal(this.src)" />
+        <p>Computer Software</p>
+      </div>
+      <div class="certificate-item" data-name="borntodev SQL">
+        <img src="/pic/borntodev-academy_Essential SQL for Everyone_certificate.png" alt="borntodev SQL"
+          onclick="openModal(this.src)" />
+        <p>Essential SQL for Everyone</p>
+      </div>
+      <div class="certificate-item" data-name="borntodev ChatGPT for Developers">
+        <img src="/pic/borntodev-academy_ChatGPT for Developers_certificate.png" alt="borntodev ChatGPT for Developers"
+          onclick="openModal(this.src)" />
+        <p>ChatGPT for Developer</p>
+      </div>
+      <div class="certificate-item" data-name="Ai">
+        <img src="/pic/Assessment in AI Era.jpg" alt="Ai" onclick="openModal(this.src)" />
+        <p>Assessment in AI Era</p>
+      </div>
+      <div class="certificate-item" data-name="Ai">
+        <img src="/pic/AI.jpg" alt="Ai" onclick="openModal(this.src)" />
+        <p>AI</p>
+      </div>
+      <div class="certificate-item" data-name="Ai">
+        <img src="/pic/AI Rosetta AlphaFold .jpg" alt="Ai" onclick="openModal(this.src)" />
+        <p>AI Rosetta AlphaFold</p>
+      </div>
+      <div class="certificate-item" data-name="Ai">
+        <img src="/pic/Artificial Interlligence .jpg" alt="Ai" onclick="openModal(this.src)" />
+        <p>Artificial Interlligence</p>
+      </div>
+      <div class="certificate-item" data-name="Mascot Design 3D Printing">
+        <img src="/pic/Mascot Design 3D.jpg" alt="Mascot Design 3D Printing" onclick="openModal(this.src)" />
+        <p>Mascot Design 3D Printing</p>
+      </div>
+      <div class="certificate-item" data-name="Cybersecurity">
+        <img src="/pic/Cybersecurity Professional .jpg" alt="Cybersecurity" onclick="openModal(this.src)" />
+        <p>Cybersecurity Professional</p>
+      </div>
+      <div class="certificate-item" data-name="Python Data NumPy Matplotlib">
+        <img src="/pic/Learn Python Data Processing with NumPy and Matplotlib.jpg" alt="Python Data NumPy Matplotlib"
+          onclick="openModal(this.src)" />
+        <p>Learn Python Data Processing with NumPy and Matplotlib</p>
+      </div>
+      <div class="certificate-item" data-name="Microsoft 365 Copilot">
+        <img src="/pic/Microsoft 365 Copilot.jpg" alt="Microsoft 365 Copilot" onclick="openModal(this.src)" />
+        <p>Microsoft 365 Copilot</p>
+      </div>
+      <div class="certificate-item" data-name="AI">
+        <img src="/pic/AI Skills of All.jpg" alt="AI" onclick="openModal(this.src)" />
+        <p>AI Skills of All</p>
+      </div>
+      <div class="certificate-item" data-name="CyberSecurity and AI">
+        <img src="/pic/Tommorrow's Cybersecurity in the Age of AI.jpg" alt="Cyber Security and AI"
+          onclick="openModal(this.src)" />
+        <p>Tommorrow's Cybersecurity in the Age of AI</p>
+      </div>
+      <div class="certificate-item" data-name="Excel Vlookup Pivot if">
+        <img src="/pic/Excel Vlookup Pivot if.jpg" alt="Excel Vlookup Pivot if" onclick="openModal(this.src)" />
+        <p>Excel Vlookup Pivot if</p>
+      </div>
+      <div class="certificate-item" data-name="GenAI">
+        <img src="pic/GenAI งานวิจัย.jpg" alt="GenAI" onclick="openModal(this.src)" />
+        <p>GenAI งานวิจัย</p>
+      </div>
+      <div class="certificate-item" data-name="coding programming">
+        <img src="pic/Learn Coding Basics with Block-based programming.jpg" alt="coding programming"
+          onclick="openModal(this.src)" />
+        <p>Learn Coding Basics with Block-based programming</p>
+      </div>
+      <div class="certificate-item" data-name="AI Technology cybercriminals">
+        <img src="pic/What would happen if cybercriminals mastered AI Technology.jpg" alt="AI Technology cybercriminals"
+          onclick="openModal(this.src)" />
+        <p>What would happen if cybercriminals mastered AI Technology</p>
+      </div>
+
+      <div class="certificate-item" data-name="AI">
+        <img src="pic/AI for Presentation.jpg" alt="AI" onclick="openModal(this.src)" />
+        <p>AI for Presentation</p>
+      </div>
+      <div class="certificate-item" data-name="Data Analyst manifesto">
+        <img src="pic/Data Analyst manifesto.jpg" alt="Data Analyst manifesto" onclick="openModal(this.src)" />
+        <p>Data Analyst manifesto</p>
+      </div>
+      <div class="certificate-item" data-name="CyberSecurity">
+        <img src="pic/Cybersecurity Foundation.jpg" alt="CyberSecurity" onclick="openModal(this.src)" />
+        <p>Cybersecurity Foundation</p>
+      </div>
+      <div class="certificate-item" data-name="English for job interviews">
+        <img src="/pic/English for job interviews.jpg" alt="English for job interviews" onclick="openModal(this.src)" />
+        <p>English for job interviews</p>
+      </div>
+      <div class="certificate-item" data-name="English Communication">
+        <img src="/pic/English Communication.jpg" alt="English Communication" onclick="openModal(this.src)" />
+        <p>English Communication</p>
+      </div>
+      <div class="certificate-item" data-name="Blockchain">
+        <img src="pic/Blockchain.jpg" alt="Blockchain" onclick="openModal(this.src)" />
+        <p>Blockchain</p>
+      </div>
+
+      <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+  </div>
+  </div>
+  <div class="modal" id="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modalImg" alt="" />
+  </div>
+
+  <script>
+    document.getElementById("search").addEventListener("input", function () {
+      let filter = this.value.toLowerCase();
+      let certificates = document.querySelectorAll(".certificate-item");
+
+      certificates.forEach((cert) => {
+        let name = cert.getAttribute("data-name").toLowerCase();
+        if (name.includes(filter)) {
+          cert.style.display = "block";
+        } else {
+          cert.style.display = "none";
+        }
+      });
+    });
+
+    function openModal(src) {
+      document.getElementById("modalImg").src = src;
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      // ซ่อนเมนูเมื่อกดลิงก์
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        });
+      });
+    });
+    // ดึงปุ่ม
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // ฟังก์ชันเช็คการเลื่อนหน้า
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = "block"; // แสดงปุ่มเมื่อเลื่อนลงมา
+      } else {
+        scrollToTopBtn.style.display = "none"; // ซ่อนปุ่มเมื่ออยู่บนสุด
+      }
+    });
+
+    // ฟังก์ชันเลื่อนกลับไปด้านบน
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // เลื่อนขึ้นแบบ smooth
+      });
+    });
+  </script>
+</body>
+
+</html>

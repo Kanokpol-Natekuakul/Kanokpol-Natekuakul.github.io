@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/Education.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Pol</a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="active"> Home</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Certificate.html">Certificate</a>
+
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section id="education" class="position-relative padding-medium" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 text-center">
+                    <h3 class="display-5 fw-bold">My Education</h3>
+                    <h1 class="mb-5">My academic background and achievements throughout my learning journey.</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Bachelor's Degree in Computer Technology</h4>
+                        <p><strong>Nakhon Pathom Rajabhat University</strong> - 2022-2025</p>
+                        <p>Learn mobile apps, write code, web, Android Studio, X Code.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>secondary education</h4>
+                        <p><strong>Joseph Upatham School</strong> - 2015-2021</p>
+                        <p>science and mathematics.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>High School Diploma</h4>
+                        <p><strong>Creative High School</strong> - 2013-2016</p>
+                        <p>Emphasized fundamental art techniques and creative problem-solving skills.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav a");
+            const currentPath = window.location.pathname.split("/").pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+
+            // ซ่อนเมนูเมื่อกดลิงก์
+            document.querySelectorAll(".nav-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("active");
+                    hamburger.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

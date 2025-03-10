@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/Skills.css" />
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Pol</a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="active"> Home</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Education.html">Education</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Certificate.html">Certificate</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <section class="skills">
+      <h1 class="heading">My Skills</h1>
+
+      <div class="marquee">
+        <div class="marquee-content">
+          <i class="fab fa-js"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-php"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-node-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-python"></i>
+          <i class="fas fa-database"></i>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .marquee {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .marquee-content {
+        display: flex;
+        animation: marquee 15s linear infinite;
+      }
+
+      .marquee-content i {
+        font-size: 15rem;
+        margin: 0 15px;
+        color: #ff6347;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+
+    <!-- <div class="skill">
+                <p>JavaScript <span>90%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>CSS <span>85%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>PHP <span>80%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>HTML <span>85%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>Node.js <span>50%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>Next.js <span>40%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>Python <span>30%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 30%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>C++ <span>70%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>MySQL <span>80%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div> -->
+    <!-- </section></div> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+        const currentPath = window.location.pathname.split("/").pop();
+
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+          hamburger.classList.toggle("active");
+        });
+
+        // ซ่อนเมนูเมื่อกดลิงก์
+        document.querySelectorAll(".nav-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
