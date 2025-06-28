@@ -30,7 +30,38 @@
   <div class="container">
     <h1>Certificates</h1>
     <input type="text" id="search" class="search-box" placeholder="Search Certificates..." />
-    <d class="certificate-list" id="certificateList">
+     <d class="certificate-list" id="certificateList">
+    
+       <div class="certificate-item" data-name="Basic Javascript">
+        <img src="/pic/Basic Javascript.png" alt="Basic Javascript"
+          onclick="openModal(this.src)" />
+        <p>Basic Javascript</p>
+      </div>
+    
+       <div class="certificate-item" data-name="HTML">
+        <img src="/pic/HTML.png" alt="HTML"
+          onclick="openModal(this.src)" />
+        <p>HTML</p>
+      </div>
+       <div class="certificate-item" data-name="Creating Game in Roblox">
+        <img src="/pic/Creating Game in Roblox.jpg" alt="Creating Game in Roblox"
+          onclick="openModal(this.src)" />
+        <p>Creating Game in Roblox</p>
+      </div>
+      
+       <div class="certificate-item" data-name="GameDesign and Visual">
+        <img src="/pic/GameDesign and Visual .jpg" alt="GameDesign and Visual"
+          onclick="openModal(this.src)" />
+        <p>GameDesign and Visual</p>
+      </div>
+     
+       <div class="certificate-item" data-name="Microsoft Excel">
+        <img src="/pic/Microsoft Excel.jpg" alt="Microsoft Excel"
+          onclick="openModal(this.src)" />
+        <p>Microsoft Excel</p>
+      </div>
+       
+   
        <div class="certificate-item" data-name="MS Power BI">
         <img src="/pic/MS Power BI.jpg" alt="MS Power BI"
           onclick="openModal(this.src)" />
@@ -362,14 +393,14 @@
         <p>Generative AI</p>
       </div>
 
-      <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+      <!-- <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button> -->
   </div>
   </div>
   <div class="modal" id="modal" onclick="closeModal()">
     <span class="close">&times;</span>
     <img id="modalImg" alt="" />
   </div>
-
+     <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
   <script>
     document.getElementById("search").addEventListener("input", function () {
       let filter = this.value.toLowerCase();

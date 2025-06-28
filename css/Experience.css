@@ -1,52 +1,241 @@
 /* ========== Experience Section ========== */
 .experience {
-    width: 80%;
-    margin: 100px auto;
+    width: 90%;
+    margin: 120px auto;
     text-align: left;
     color: white;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(34, 34, 34, 0.9));
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(183, 75, 75, 0.2);
 }
 
 .heading {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #b74b4b, #ff6b6b, #b74b4b);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    animation: gradientShift 3s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(183, 75, 75, 0.5);
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .experience-item {
-    margin-bottom: 30px;
-    border-left: 5px solid #b74b4b; /* Red accent for each item */
-    padding-left: 20px;
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #1a1a1a, #222);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(183, 75, 75, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, #b74b4b, #ff6b6b, #b74b4b);
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(183, 75, 75, 0.5);
+}
+
+.experience-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #b74b4b, #ff6b6b);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(183, 75, 75, 0.2);
+    border-color: rgba(183, 75, 75, 0.3);
+}
+
+.experience-item:hover::after {
+    opacity: 1;
 }
 
 .experience-item h3 {
-    font-size: 2rem;
-    color: #b74b4b; /* Orange color for job titles */
-    margin-bottom: 5px;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #b74b4b, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(183, 75, 75, 0.3);
 }
+
 .experience-item p {
     font-size: 1.6rem;
-    font-weight: 400;
-    color: #d3d3d3;
+    font-weight: 500;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 .time {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    color: #aaa;
-    margin-bottom: 10px;
+    color: #b74b4b;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(183, 75, 75, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(183, 75, 75, 0.3);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover .time {
+    background: rgba(183, 75, 75, 0.2);
+    border-color: rgba(183, 75, 75, 0.5);
+    transform: scale(1.05);
 }
 
 .description {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    color: #d3d3d3;
+    color: #d0d0d0;
+    line-height: 1.6;
+    padding-left: 15px;
+    border-left: 3px solid rgba(183, 75, 75, 0.3);
+    margin-top: 15px;
+    transition: all 0.3s ease;
 }
 
+.experience-item:hover .description {
+    border-left-color: rgba(183, 75, 75, 0.6);
+    color: #e0e0e0;
+}
 
-/* 
-.experience-item:hover {
-    background-color: #333;
-    transition: background-color 0.3s ease;
-} */
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .experience {
+        width: 95%;
+        margin: 100px auto;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+    
+    .heading {
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .experience-item {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    .experience-item h3 {
+        font-size: 1.8rem;
+    }
+    
+    .experience-item p {
+        font-size: 1.4rem;
+    }
+    
+    .time {
+        font-size: 1.2rem;
+        padding: 4px 12px;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+        padding-left: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .experience {
+        width: 98%;
+        margin: 80px auto;
+        padding: 1.5rem;
+    }
+    
+    .heading {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .experience-item {
+        margin-bottom: 25px;
+        padding: 15px;
+    }
+    
+    .experience-item h3 {
+        font-size: 1.6rem;
+    }
+    
+    .experience-item p {
+        font-size: 1.3rem;
+    }
+    
+    .time {
+        font-size: 1.1rem;
+        padding: 3px 10px;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+    
+    .experience-item h3 {
+        font-size: 1.4rem;
+    }
+    
+    .experience-item p {
+        font-size: 1.2rem;
+    }
+    
+    .time {
+        font-size: 1rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+}
