@@ -9,7 +9,11 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fa-brands-400.woff2') format('woff2');
+  font-display: swap;
+}
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -205,7 +209,7 @@ span{
     text-shadow: 0 0 20px rgba(183, 75, 75, 0.5);
 }
 
-.home-content h3{
+.home-content h2{
     font-size: 4.2rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -233,15 +237,14 @@ span{
 .home-img::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    inset: 0;
     background: linear-gradient(45deg, #b74b4b, #ff6b6b, #b74b4b);
     border-radius: 50%;
     z-index: -1;
     animation: rotate 10s linear infinite;
+    transform: scale(1.1); /* ขยายออก 10% โดยไม่เปลี่ยน layout */
 }
+
 
 @keyframes rotate {
     0% { transform: rotate(0deg); }
@@ -414,7 +417,7 @@ span{
         margin: 5rem 4rem;
     }
 
-    .home .home-content h3{
+    .home .home-content h2{
         font-size: 2.8rem;
     }
 
@@ -552,7 +555,7 @@ span{
         font-size: 4rem;
     }
     
-    .home-content h3 {
+    .home-content h2 {
         font-size: 2.5rem;
     }
     

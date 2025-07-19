@@ -3,9 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+     <meta name="description" content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+    <!-- Style CSS -->
+    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.v1.css">
+    <link rel="preload" href="/pic/index.jpg" as="image">
+    <link rel="preload" href="critical.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="critical.css"></noscript>
+    <link rel="stylesheet" href="all.min.css" media="print" onload="this.media='all'">
     <title>Portfolio Website</title>
 </head>
 
@@ -29,17 +43,17 @@
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="/pic/index.jpg" alt="">
+           <img src="/pic/index.jpg" alt="รูปโปรไฟล์ Kanokpol Natekuakul" fetchpriority="high" >
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Pol</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
+            <h2 class="typing-text">I'm a <span></span></h2>
             <p>Hi ! My name is Kanokpol Natekuakul</p>
             <div class="social-icons">
-                <a href="https://github.com/Kanokpol-Natekuakul"target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://line.me/R/ti/p/~kanokpolpol"target="_blank"><i class="fa-brands fa-line"></i></a>
-                <a href="https://www.facebook.com/kanokpolpol"target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/pol_knp_/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Kanokpol-Natekuakul"target="_blank" aria-label="GitHub ของ Kanokpol Natekuakul"><i class="fa-brands fa-github"></i></a>
+                <a href="https://line.me/R/ti/p/~kanokpolpol"target="_blank" aria-label="line ของ Kanokpol Natekuakul"><i class="fa-brands fa-line"></i></a>
+                <a href="https://www.facebook.com/kanokpolpol"target="_blank" aria-label="facebook ของ Kanokpol Natekuakul"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/pol_knp_/"target="_blank" aria-label="instagram ของ Kanokpol Natekuakul"><i class="fa-brands fa-instagram"></i></a>
 
                 <!-- </div>
             <a href="#" class="btn">Hire me</a>
@@ -47,24 +61,24 @@
 
 
     </section>
-    <script>
+    <script defer>
         document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
 
-            hamburger.addEventListener("click", function () {
-                navMenu.classList.toggle("active");
-                hamburger.classList.toggle("active");
-            });
-
-            // ซ่อนเมนูเมื่อกดลิงก์
-            document.querySelectorAll(".nav-menu a").forEach(link => {
-                link.addEventListener("click", () => {
-                    navMenu.classList.remove("active");
-                    hamburger.classList.remove("active");
-                });
-            });
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            hamburger.classList.toggle("active");
         });
+
+        navMenu.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+    }
+  });
+});
+
     </script>
 </body>
 
