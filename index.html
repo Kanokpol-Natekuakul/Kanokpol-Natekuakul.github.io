@@ -5,9 +5,23 @@
     <meta charset="UTF-8">
      <meta name="description" content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" as="image" href="/pic/index.jpg">
     <title>Portfolio Website</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+        document.head.appendChild(fa);
+
+        var gf = document.createElement('link');
+        gf.rel = 'stylesheet';
+        gf.href = 'https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap';
+        document.head.appendChild(gf);
+      });
+    </script>
 </head>
 
 <body>
@@ -30,7 +44,7 @@
     </header>
     <section class="home">
         <div class="home-img">
-           <img src="/pic/index.jpg" alt="รูปโปรไฟล์ Kanokpol Natekuakul">
+           <img src="/pic/index.jpg" alt="รูปโปรไฟล์ Kanokpol Natekuakul" fetchpriority="high">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Pol</span></h1>
