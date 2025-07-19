@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram.">
-     <meta name="description" content="กนกพล">
-     <meta name="description" content="กนกพล เนตรเกื้อกูล">
-     <meta name="description" content="kanokpol">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram."
+    />
+    <meta name="description" content="กนกพล" />
+    <meta name="description" content="กนกพล เนตรเกื้อกูล" />
+    <meta name="description" content="kanokpol" />
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var icons = document.querySelector('.projects-grid');
+      document.addEventListener("DOMContentLoaded", function () {
+        var icons = document.querySelector(".projects-grid");
         var faLoaded = false;
         function loadFA() {
           if (!faLoaded) {
-            var fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+            var fa = document.createElement("link");
+            fa.rel = "stylesheet";
+            fa.href =
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
             document.head.appendChild(fa);
             faLoaded = true;
           }
         }
         if (icons) {
-          var observer = new IntersectionObserver(function(entries) {
+          var observer = new IntersectionObserver(function (entries) {
             if (entries[0].isIntersecting) {
               loadFA();
               observer.disconnect();
@@ -30,213 +33,378 @@
           });
           observer.observe(icons);
         }
-        var gf = document.createElement('link');
-        gf.rel = 'stylesheet';
-        gf.href = 'https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap';
-        document.head.appendChild(gf);
+        setTimeout(function () {
+          var gf = document.createElement("link");
+          gf.rel = "stylesheet";
+          gf.href =
+            "https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap";
+          document.head.appendChild(gf);
+        }, 0);
       });
     </script>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/Project.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/Project.css" />
     <title>Portfolio Website</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="index.html" class="logo">Pol</a>
+      <a href="index.html" class="logo">Pol</a>
 
-        <nav class="nav-menu">
-            <a href="index.html"> Home</a>
-            <a href="Skills.html">Skills</a>
-            <a href="Project.html"  class="active">Projects</a>
-            <a href="Experience.html">Experience</a>
-            <a href="Certificate.html">Certificate</a>
-
-        </nav>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <nav class="nav-menu">
+        <a href="index.html"> Home</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Project.html" class="active">Projects</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Certificate.html">Certificate</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
-    <section id="Project" class="position-relative padding-medium" data-aos="fade-up">
-  <div class="container">
-    <div class="row justify-content-center mb-4">
-      <div class="col-12 text-center">
-        <h3 class="fw-bold mb-4">My Projects</h3>
-      </div>
-    </div>
+    <section
+      id="Project"
+      class="position-relative padding-medium"
+      data-aos="fade-up"
+    >
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-12 text-center">
+            <h3 class="fw-bold mb-4">My Projects</h3>
+          </div>
+        </div>
 
-    <div class="projects-grid">
-      <!-- Project Cards -->
-      <div class="project-card">
-        <a href="https://gamewebsitedemo.netlify.app/" target="_blank">
-          <img src="https://playism.com/wp-content/uploads/2024/12/01_Bladechimera_1920x1080.jpg" alt="Game Website Demo" width="391" height="220" style="object-fit:cover;display:block;margin:0 auto;">
-        </a>
-        <h2 class="card-title">Game Website Demo</h2>
-        <a href="https://gamewebsitedemo.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+        <div class="projects-grid">
+          <!-- Project Cards -->
+          <div class="project-card">
+            <a href="https://gamewebsitedemo.netlify.app/" target="_blank">
+              <img
+                src="https://playism.com/wp-content/uploads/2024/12/01_Bladechimera_1920x1080.jpg"
+                alt="Game Website Demo"
+                width="391"
+                height="220"
+                style="object-fit: cover; display: block; margin: 0 auto"
+              />
+            </a>
+            <h2 class="card-title">Game Website Demo</h2>
+            <a
+              href="https://gamewebsitedemo.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://vite-react-fs.vercel.app/" target="_blank">
-          <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Port_Test React" width="311" height="467" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Port_Test React</h2>
-        <a href="https://vite-react-fs.vercel.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://vite-react-fs.vercel.app/" target="_blank">
+              <img
+                src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Port_Test React"
+                width="311"
+                height="467"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Port_Test React</h2>
+            <a
+              href="https://vite-react-fs.vercel.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://futureshopfs.netlify.app/" target="_blank">
-          <img src="https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/thumbnail.webp" alt="Future Shops" width="311" height="311" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Future Shops</h2>
-        <a href="https://futureshopfs.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://futureshopfs.netlify.app/" target="_blank">
+              <img
+                src="https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/thumbnail.webp"
+                alt="Future Shops"
+                width="311"
+                height="311"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Future Shops</h2>
+            <a
+              href="https://futureshopfs.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://temcoffee.netlify.app/" target="_blank">
-          <img src="https://temcoffee.netlify.app/main.jpg" alt="Tem Coffee" width="311" height="311" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Tem Coffee</h2>
-        <a href="https://temcoffee.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://temcoffee.netlify.app/" target="_blank">
+              <img
+                src="https://temcoffee.netlify.app/main.jpg"
+                alt="Tem Coffee"
+                width="311"
+                height="311"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Tem Coffee</h2>
+            <a
+              href="https://temcoffee.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://shoestm.netlify.app/" target="_blank">
-          <img src="https://shoestm.netlify.app/shoes-removebg-preview.png" alt="Tem Shoes" width="311" height="311" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Tem Shoes</h2>
-        <a href="https://shoestm.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://shoestm.netlify.app/" target="_blank">
+              <img
+                src="https://shoestm.netlify.app/shoes-removebg-preview.png"
+                alt="Tem Shoes"
+                width="311"
+                height="311"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Tem Shoes</h2>
+            <a
+              href="https://shoestm.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://pikachu-animation-demo.vercel.app/" target="_blank">
-          <img src="https://a.top4top.net/p_1990j031.gif" alt="Pikachu Animation" width="311" height="311" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Pikachu Animation Demo</h2>
-        <a href="https://pikachu-animation-demo.vercel.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a
+              href="https://pikachu-animation-demo.vercel.app/"
+              target="_blank"
+            >
+              <img
+                src="https://a.top4top.net/p_1990j031.gif"
+                alt="Pikachu Animation"
+                width="311"
+                height="311"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Pikachu Animation Demo</h2>
+            <a
+              href="https://pikachu-animation-demo.vercel.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://taxcalbtd.netlify.app/" target="_blank">
-          <img src="/img/tax.png" alt="Tax Calculator" width="311" height="284" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">TAX</h2>
-        <a href="https://taxcalbtd.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://taxcalbtd.netlify.app/" target="_blank">
+              <img
+                src="/img/tax.png"
+                alt="Tax Calculator"
+                width="311"
+                height="284"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">TAX</h2>
+            <a
+              href="https://taxcalbtd.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://solorsystemmm.netlify.app/" target="_blank">
-          <img src="/img/solor.png" alt="Solar System" width="311" height="254" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Solor System</h2>
-        <a href="https://solorsystemmm.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://solorsystemmm.netlify.app/" target="_blank">
+              <img
+                src="/img/solor.png"
+                alt="Solar System"
+                width="311"
+                height="254"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Solor System</h2>
+            <a
+              href="https://solorsystemmm.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://restaurantqq.netlify.app/" target="_blank">
-          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format&fit=crop&q=60" alt="Restaurant" width="311" height="467" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Restaurant</h2>
-        <a href="https://restaurantqq.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://restaurantqq.netlify.app/" target="_blank">
+              <img
+                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format&fit=crop&q=60"
+                alt="Restaurant"
+                width="311"
+                height="467"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Restaurant</h2>
+            <a
+              href="https://restaurantqq.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://grade-calculator-btd.vercel.app/" target="_blank">
-          <img src="/img/grade.png" alt="Grade Calculator" width="351" height="180" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Grade Calculator</h2>
-        <a href="https://grade-calculator-btd.vercel.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://grade-calculator-btd.vercel.app/" target="_blank">
+              <img
+                src="/img/grade.png"
+                alt="Grade Calculator"
+                width="351"
+                height="180"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Grade Calculator</h2>
+            <a
+              href="https://grade-calculator-btd.vercel.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://game-tem.vercel.app/" target="_blank">
-          <img src="https://game-tem.vercel.app/game-removebg-preview.png" alt="Tem Game" width="311" height="311" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Tem Game</h2>
-        <a href="https://game-tem.vercel.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://game-tem.vercel.app/" target="_blank">
+              <img
+                src="https://game-tem.vercel.app/game-removebg-preview.png"
+                alt="Tem Game"
+                width="311"
+                height="311"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Tem Game</h2>
+            <a
+              href="https://game-tem.vercel.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://digitaldemoclock.netlify.app/" target="_blank">
-          <img src="/img/clock.png" alt="Digital Clock" width="340" height="180" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Digital Clock</h2>
-        <a href="https://digitaldemoclock.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://digitaldemoclock.netlify.app/" target="_blank">
+              <img
+                src="/img/clock.png"
+                alt="Digital Clock"
+                width="340"
+                height="180"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Digital Clock</h2>
+            <a
+              href="https://digitaldemoclock.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://to-do-list-btd.onrender.com/" target="_blank">
-          <img src="/img/to_do.png" alt="To Do List" width="337" height="180" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">To Do List</h2>
-        <a href="https://to-do-list-btd.onrender.com/" target="_blank" class="btn btn-primary">View Project</a>
-      </div>
+          <div class="project-card">
+            <a href="https://to-do-list-btd.onrender.com/" target="_blank">
+              <img
+                src="/img/to_do.png"
+                alt="To Do List"
+                width="337"
+                height="180"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">To Do List</h2>
+            <a
+              href="https://to-do-list-btd.onrender.com/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
 
-      <div class="project-card">
-        <a href="https://dropdownform-tem.netlify.app/" target="_blank">
-          <img src="https://dropdownform-tem.netlify.app/1.png" alt="Dropdownform Demo" width="330" height="220" style="object-fit:cover;display:block;margin:0 auto;" loading="lazy">
-        </a>
-        <h2 class="card-title">Dropdownform Demo</h2>
-        <a href="https://dropdownform-tem.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
+          <div class="project-card">
+            <a href="https://dropdownform-tem.netlify.app/" target="_blank">
+              <img
+                src="https://dropdownform-tem.netlify.app/1.png"
+                alt="Dropdownform Demo"
+                width="330"
+                height="220"
+                style="object-fit: cover; display: block; margin: 0 auto"
+                loading="lazy"
+              />
+            </a>
+            <h2 class="card-title">Dropdownform Demo</h2>
+            <a
+              href="https://dropdownform-tem.netlify.app/"
+              target="_blank"
+              class="btn btn-primary"
+              >View Project</a
+            >
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  
-</section>
-<button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
-  
+    </section>
+    <button id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
     <script defer>
-        document.addEventListener("DOMContentLoaded", function () {
-            const navLinks = document.querySelectorAll("nav a");
-            const currentPath = window.location.pathname.split("/").pop();
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
 
-            navLinks.forEach(link => {
-                if (link.getAttribute("href") === currentPath) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
-                }
-            });
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+          hamburger.classList.toggle("active");
         });
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector(".nav-menu");
 
-            hamburger.addEventListener("click", function () {
-                navMenu.classList.toggle("active");
-                hamburger.classList.toggle("active");
-            });
-
-            // ซ่อนเมนูเมื่อกดลิงก์
-            document.querySelectorAll(".nav-menu a").forEach(link => {
-                link.addEventListener("click", () => {
-                    navMenu.classList.remove("active");
-                    hamburger.classList.remove("active");
-                });
-            });
+        navMenu.addEventListener("click", (e) => {
+          if (e.target.tagName === "A") {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+          }
         });
-          // ดึงปุ่ม
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    // ฟังก์ชันเช็คการเลื่อนหน้า
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = "block"; // แสดงปุ่มเมื่อเลื่อนลงมา
-      } else {
-        scrollToTopBtn.style.display = "none"; // ซ่อนปุ่มเมื่ออยู่บนสุด
-      }
-    }, { passive: true });
-
-    // ฟังก์ชันเลื่อนกลับไปด้านบน
-    scrollToTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // เลื่อนขึ้นแบบ smooth
       });
-    });
-    </script>
-</body>
+      // ดึงปุ่ม
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+      // ฟังก์ชันเช็คการเลื่อนหน้า
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = "block"; // แสดงปุ่มเมื่อเลื่อนลงมา
+          } else {
+            scrollToTopBtn.style.display = "none"; // ซ่อนปุ่มเมื่ออยู่บนสุด
+          }
+        },
+        { passive: true }
+      );
+
+      // ฟังก์ชันเลื่อนกลับไปด้านบน
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // เลื่อนขึ้นแบบ smooth
+        });
+      });
+    </script>
+  </body>
 </html>

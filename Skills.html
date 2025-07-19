@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      @font-face {
+        font-family: "Font Awesome 6 Brands";
+        font-display: swap;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-brands-400.woff2")
+          format("woff2");
+      }
+      @font-face {
+        font-family: "Font Awesome 6 Free";
+        font-display: swap;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2")
+          format("woff2");
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta name="description" content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram.">
-     <meta name="description" content="กนกพล">
-     <meta name="description" content="กนกพล เนตรเกื้อกูล">
-     <meta name="description" content="kanokpol">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    <meta
+      name="description"
+      content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram."
     />
+    <meta name="description" content="กนกพล" />
+    <meta name="description" content="กนกพล เนตรเกื้อกูล" />
+    <meta name="description" content="kanokpol" />
+    <!-- FontAwesome will be loaded deferred via JS below -->
     <script defer>
-      document.addEventListener('DOMContentLoaded', function() {
-        var icons = document.querySelector('.marquee-content');
+      document.addEventListener("DOMContentLoaded", function () {
+        var icons = document.querySelector(".marquee-content");
         var faLoaded = false;
         function loadFA() {
           if (!faLoaded) {
-            var fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+            var fa = document.createElement("link");
+            fa.rel = "stylesheet";
+            fa.href =
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
             document.head.appendChild(fa);
-            var style = document.createElement('style');
-            style.innerHTML = "@font-face { font-family: 'Font Awesome 6 Brands'; font-display: swap; } @font-face { font-family: 'Font Awesome 6 Free'; font-display: swap; }";
+            var style = document.createElement("style");
+            style.innerHTML =
+              "@font-face { font-family: 'Font Awesome 6 Brands'; font-display: swap; } @font-face { font-family: 'Font Awesome 6 Free'; font-display: swap; }";
             document.head.appendChild(style);
             faLoaded = true;
           }
         }
         if (icons) {
-          var observer = new IntersectionObserver(function(entries) {
+          var observer = new IntersectionObserver(function (entries) {
             if (entries[0].isIntersecting) {
               loadFA();
               observer.disconnect();
@@ -36,9 +52,10 @@
           });
           observer.observe(icons);
         }
-        var gf = document.createElement('link');
-        gf.rel = 'stylesheet';
-        gf.href = 'https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap';
+        var gf = document.createElement("link");
+        gf.rel = "stylesheet";
+        gf.href =
+          "https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap";
         document.head.appendChild(gf);
       });
     </script>
@@ -51,8 +68,8 @@
       <a href="index.html" class="logo">Pol</a>
 
       <nav class="nav-menu">
-        <a href="index.html" > Home</a>
-        <a href="Skills.html"class="active" >Skills</a>
+        <a href="index.html"> Home</a>
+        <a href="Skills.html" class="active">Skills</a>
         <a href="Project.html">Projects</a>
         <a href="Experience.html">Experience</a>
         <a href="Certificate.html">Certificate</a>
@@ -111,32 +128,19 @@
     </style>
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll("nav a");
-        const currentPath = window.location.pathname.split("/").pop();
-
-        navLinks.forEach((link) => {
-          if (link.getAttribute("href") === currentPath) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
-        });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
-        hamburger.addEventListener("click", function () {
+        hamburger.addEventListener("click", () => {
           navMenu.classList.toggle("active");
           hamburger.classList.toggle("active");
         });
 
-        // ซ่อนเมนูเมื่อกดลิงก์
-        document.querySelectorAll(".nav-menu a").forEach((link) => {
-          link.addEventListener("click", () => {
+        navMenu.addEventListener("click", (e) => {
+          if (e.target.tagName === "A") {
             navMenu.classList.remove("active");
             hamburger.classList.remove("active");
-          });
+          }
         });
       });
     </script>

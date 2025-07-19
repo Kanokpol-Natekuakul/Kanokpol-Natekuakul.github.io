@@ -512,17 +512,17 @@
         <p>AR Spark AR Studio</p>
       </div>
       <div class="certificate-item" data-name="ความมั่นคงปลอยภัยไซเบอร์ในระดับองค์กร">
-        <img src="/pic/ความมั่นคงปลอยภัยไซเบอร์ในระดับองค์กร.jpg" alt="ความมั่นคงปลอยภัยไซเบอร์ในระดับองค์กร" width="343" height="242" loading="lazy"
+        <img src="/pic/ความมั่นคงปลอยภัยไซเบอร์ในระดับองค์กร.jpg" alt="ความมั่นคงปลอยภัยไซเบอร์ในระดับองค์กร" loading="lazy"
           onclick="openModal(this.src)" />
         <p>ความมั่นคงปลอยภัยไซเบอร์ในระดับองค์กร</p>
       </div>
       <div class="certificate-item" data-name="ความมั่นคงปลอดภัยให้ธุรกิจออนไลน์">
-        <img src="/pic/ความมั่นคงปลอดภัยให้ธุรกิจออนไลน์.jpg" alt="ความมั่นคงปลอดภัยให้ธุรกิจออนไลน์" width="343" height="242" loading="lazy"
+        <img src="/pic/ความมั่นคงปลอดภัยให้ธุรกิจออนไลน์.jpg" alt="ความมั่นคงปลอดภัยให้ธุรกิจออนไลน์"  loading="lazy"
           onclick="openModal(this.src)" />
         <p>ความมั่นคงปลอดภัยให้ธุรกิจออนไลน์</p>
       </div>
       <div class="certificate-item" data-name="Generative AI">
-        <img src="/pic/Generative AI.jpg" alt="Generative AI" width="343" height="242" loading="lazy"
+        <img src="/pic/Generative AI.jpg" alt="Generative AI" loading="lazy"
           onclick="openModal(this.src)" />
         <p>Generative AI</p>
       </div>
@@ -556,22 +556,21 @@
       document.getElementById("modal").style.display = "none";
     }
     document.addEventListener("DOMContentLoaded", function () {
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
 
-      hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-      });
-
-      // ซ่อนเมนูเมื่อกดลิงก์
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-          hamburger.classList.remove("active");
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            hamburger.classList.toggle("active");
         });
-      });
-    });
+
+        navMenu.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+    }
+  });
+});
     // ดึงปุ่ม
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
