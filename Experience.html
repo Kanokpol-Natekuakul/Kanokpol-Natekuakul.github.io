@@ -4,7 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <meta name="description" content="เว็บไซต์ผลงานของ Kanokpol Natekuakul รวมโปรเจค ผลงาน และช่องทางการติดต่อ เช่น GitHub, Facebook, Line และ Instagram.">
+     <meta name="description" content="กนกพล">
+     <meta name="description" content="กนกพล เนตรเกื้อกูล">
+     <meta name="description" content="kanokpol">
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function() {
+        var exp = document.querySelector('.experience');
+        var faLoaded = false;
+        function loadFA() {
+          if (!faLoaded) {
+            var fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+            document.head.appendChild(fa);
+            faLoaded = true;
+          }
+        }
+        if (exp) {
+          var observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+              loadFA();
+              observer.disconnect();
+            }
+          });
+          observer.observe(exp);
+        }
+        var gf = document.createElement('link');
+        gf.rel = 'stylesheet';
+        gf.href = 'https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap';
+        document.head.appendChild(gf);
+      });
+    </script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/Experience.css">
     <title>Portfolio Website</title>
@@ -15,10 +46,10 @@
         <a href="index.html" class="logo">Pol</a>
 
         <nav class="nav-menu">
-            <a href="index.html" class="active"> Home</a>
+            <a href="index.html" > Home</a>
             <a href="Skills.html">Skills</a>
             <a href="Project.html">Projects</a>
-            <a href="Experience.html">Experience</a>
+            <a href="Experience.html" class="active">Experience</a>
             <a href="Certificate.html">Certificate</a>
 
         </nav>
@@ -55,7 +86,7 @@
         <!-- Add more experience items as needed -->
     </section>
 
-    <script>
+    <script defer>
         document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll("nav a");
             const currentPath = window.location.pathname.split("/").pop();

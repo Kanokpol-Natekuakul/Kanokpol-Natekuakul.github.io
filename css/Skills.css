@@ -1,4 +1,9 @@
 /* ========== Skills Section ========== */
+
+/* เพิ่ม min-height ให้ marquee เพื่อป้องกัน layout shift */
+.marquee {
+    min-height: 250px;
+}
 section.skills {
     width: 90%;
     margin: 120px auto;
